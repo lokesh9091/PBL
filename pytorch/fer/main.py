@@ -119,7 +119,7 @@ def main():
 
     model = CNN().to(device)
 
-    # ✅ USE WEIGHTED LOSS HERE
+    # USE WEIGHTED LOSS HERE
     criterion = nn.CrossEntropyLoss(weight=weights)
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
@@ -148,9 +148,9 @@ def main():
     torch.save(model.state_dict(), "emotion_model.pth")
     print("Model saved")
 
-    # ==================
+    
     # EVALUATION
-    # ==================
+    # 
     correct = 0
     total = 0
 
